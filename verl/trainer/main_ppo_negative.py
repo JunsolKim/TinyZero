@@ -29,8 +29,6 @@ def _select_rm_score_fn(data_source):
     elif "multiply" in data_source or "arithmetic" in data_source:
         return multiply.compute_score
     elif "countdown" in data_source:
-        return countdown.compute_score
-    elif "countdown_negative" in data_source:
         return countdown_negative.compute_score
     else:
         raise NotImplementedError
